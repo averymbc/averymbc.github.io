@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>avery • code portfolio</title>
 
 <style type="text/css">
-a { text-decoration: none;}
+a { text-decoration: none; color: black; }
 /* little pond */
 .littlepond { width: 380px; background: white; padding-left: 8px; border-style: solid; border-width: 0px 0px 0px 1px; }
 .pondinner { width: 300px; background: white; padding: 20px; position: relative; border-style: solid; border-width: 0px 0px 0px 40px; }
@@ -132,12 +133,12 @@ a { text-decoration: none;}
 .kcminner { width: 200px; height: 340px; background: rgba(255,255,255,0.6); position: absolute; top: 0px; left: 0px; border-top: 10px solid #9605da; }
 .kcminner img { width: 100px; height: 100px; border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px; padding: 5px; border: 2px solid white; margin-top: 10px; margin-bottom: 10px; }
 .hmiquote { width: 180px; font: 8px/95% calibri; text-align: justify; text-transform: uppercase; letter-spacing: 1px; height: 68px; overflow: hidden; color: black; }
-.hmiquote:first-line { font: 14px/95% abril fatface; }
+.hmiquote:first-line { font: 14px/95% PT Serif; }
 .hminfo { margin: 10px; border-top: 1px solid #9605da; padding-top: 10px; }
-.hminfo span { font: 400 9px/16px abril fatface; text-align: center; text-transform: uppercase; background: black; color: white; width: 87px; height: 16px; margin-right: 5px; display: inline-block; margin-bottom: 5px; border-bottom: 3px solid #9605da; }
+.hminfo span { font: 400 9px/16px PT Serif; text-align: center; text-transform: uppercase; background: black; color: white; width: 87px; height: 16px; margin-right: 5px; display: inline-block; margin-bottom: 5px; border-bottom: 3px solid #9605da; }
 .hminfo span:nth-child(2), .hminfo span:nth-child(4), .hminfo a:nth-child(6) span { margin-right: 0px; }
-.hmiooc { width: 180px; margin-top: -5px; font: 20px/20px abril fatface; border-bottom: 5px solid black; padding-bottom: 3px; color: #9605da; }
-.kcname { width: 250px; height: 45px; font: 25px/45px abril fatface; color: white; background: #9605da; border-bottom: 10px solid black; }
+.hmiooc { width: 180px; margin-top: -5px; font: 20px/20px PT Serif; border-bottom: 5px solid black; padding-bottom: 3px; color: #9605da; }
+.kcname { width: 250px; height: 45px; font: 25px/45px PT Serif; color: white; background: #9605da; border-bottom: 10px solid black; }
 
 .kcmain { opacity: 0; -webkit-transition: 0.5s all ease-in-out; -moz-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out; }
 .kcmini:hover .kcmain { opacity: 1; }
@@ -149,18 +150,18 @@ a { text-decoration: none;}
 .flowerimage { width: 500px; height: 300px; }
 .flowertext { background: white; width: 330px; padding: 40px; margin-top: -45px; margin-bottom: -20px; z-index: 1; position: relative; text-align: Justify; }
 .flowerbottom { width: 500px; height: 50px; background-position: 90% 120%; }
-.flowertext h1 { margin: 0px; font: 900 25px/25px lato; text-align: left; text-transform: uppercase; padding-bottom: 5px; border-bottom: 5px solid #ee8877; display: inline-block; margin-bottom: 20px; color: #555544; }
-.mainflower { font: 10px/14px lato; letter-spacing: 1px; text-align: Justify; color: #555544; }
+.flowertext h1 { margin: 0px; font: 900 25px/25px roboto; text-align: left; text-transform: uppercase; padding-bottom: 5px; border-bottom: 5px solid #ee8877; display: inline-block; margin-bottom: 20px; color: #555544; }
+.mainflower { font: 10px/14px roboto; letter-spacing: 1px; text-align: Justify; color: #555544; }
 .mainflower b { color: #ee8877; font-size: 14px; }
 .mainflower i { color: #ee8877; font-size: 11px; }
 
-.flowertag { margin-top: 20px; margin-left: 60px; font: 700 12px/25px lato; text-align: right; text-transform: uppercase; }
+.flowertag { margin-top: 20px; margin-left: 60px; font: 700 12px/25px roboto; text-align: right; text-transform: uppercase; }
 .flowertag span { border-bottom: 4px solid #ee8877; padding-bottom: 2px; margin-left: 6px; }
 
 
 .flowerhov { position: relative; top: 16px; width: 500px; overflow: hidden; }
-.flowerhov h1 { margin: 0px; background: #ee8877; width: 350px; font: 400 10px/10px lato; text-align: center; text-transform: uppercase; letter-spacing: 2px;  color: white; padding: 20px 0px; margin-bottom: 10px; position: relative; left: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
-.flowerhov span { width: 170px; background: #ffccbb; display: inline-block; margin-right: 10px; margin-bottom: 10px; font: 8px/8px lato; text-align: center; text-transform: uppercase; letter-spacing: 1px; padding: 10px 0px; position: relative; right: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
+.flowerhov h1 { margin: 0px; background: #ee8877; width: 350px; font: 400 10px/10px roboto; text-align: center; text-transform: uppercase; letter-spacing: 2px;  color: white; padding: 20px 0px; margin-bottom: 10px; position: relative; left: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
+.flowerhov span { width: 170px; background: #ffccbb; display: inline-block; margin-right: 10px; margin-bottom: 10px; font: 8px/8px roboto; text-align: center; text-transform: uppercase; letter-spacing: 1px; padding: 10px 0px; position: relative; right: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
 .flowerhov span:nth-child(odd) { margin-right: 0px; }
 .flowerhover:hover .flowerhov h1 { left: 0px; }
 .flowerhover:hover .flowerhov span { right: 0px; }
@@ -296,7 +297,7 @@ a { text-decoration: none;}
 
 .aveycode td div td { padding: 0px; }
 
-.aveyhits { margin: 30px; font: 10px/10px lato; text-transform: uppercase; letter-spacing: 1px; }
+.aveyhits { margin: 30px; font: 10px/10px roboto; text-transform: uppercase; letter-spacing: 1px; }
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
@@ -740,7 +741,15 @@ Pudding tiramisu cupcake apple pie. Powder biscuit tootsie roll wafer cake ginge
   </div></div></center></td></tr>
   </table>
   
-  <div class="aveyhits">hello</div>
+  <div class="aveyhits">avery chan • code portfolio • <script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5586068";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=&e2=&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script> / <script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3317754";
+fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
+</script>
+</div>
   </div></center>
 </body>
 </html>
