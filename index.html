@@ -1,261 +1,755 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Avery Chan • UXSoc</title>
+<title>avery • code portfolio</title>
+
 <style type="text/css">
-body { margin: 0px; background: white; font: 11px/11px roboto; }
-a { color: #3b3e42; text-decoration: none; }
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+a { text-decoration: none; color: black; }
+/* little pond */
+.littlepond { width: 380px; background: white; padding-left: 8px; border-style: solid; border-width: 0px 0px 0px 1px; }
+.pondinner { width: 300px; background: white; padding: 20px; position: relative; border-style: solid; border-width: 0px 0px 0px 40px; }
+.pondimg, .pondimg img { display: inline-block; width: 100px; height: 100px; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; }
+.pondimg { position: absolute; top: 20px; left: 20px;}
+.pondtitle { font: italic 9px/9px cambria, georgia; text-transform: lowercase; text-align: center; letter-spacing: 2px; color: white; display: inline-block; padding: 5px 10px; position: absolute; top: 40px; left: 130px;  }
+.pondsub { font: italic 8px/8px cambria, georgia; text-transform: uppercase; text-align: justify; letter-spacing: 2px; width: 170px; height: 40px; overflow: hidden; position: absolute; top: 65px; left: 150px; }
+.pondscroll { width: 295px; height: 150px; padding-right: 5px; overflow: auto; font: 10px/11px cambria, georgia; text-align: justify; text-indent: 40px; margin-top: 120px; }
+.pondscroll::-webkit-scrollbar { width: 9px; }
+.pondscroll::-webkit-scrollbar-track { width: 1px; border-left: 4px solid white; border-right: 4px solid white; }
+.pondscroll::-webkit-scrollbar-thumb { border: 2px solid white; }
+.littlepond { border-color: #69D2E7; box-shadow: -3px 0px 0px white, -4px 0px 0px #F38630, -7px 0px 0px white, -30px 0px 0px #A7DBD8; }
+.pondinner { border-color: #F38630; }
+.pondtitle { background: #69D2E7; }
+.pondscroll::-webkit-scrollbar-track, .pondscroll::-webkit-scrollbar-thumb { background: #A7DBD8; }
 
-#uxsoc { width: 100%; }
-.uxs1 { width: 100%; position: relative; height: 788px; text-align: left;  }
-.uxsoc-logo { background-image: url(https://cdnw.nickpic.host/xhbcys.png); width: 150px; height: 57px; background-size: 150px; }
-.uxs1 .uxsoc-logo { position: absolute; top: 84px; left: 188px; }
-.uxs1-bar { position: absolute; top: 100px; right: 188px; }
-.uxs1-bar a { margin-left: 63px; font: 400 16px/16px Nunito Sans; }
-.uxs1-intro { width: calc(100% - 376px); position: absolute; left: 188px; top: 245px; }
-.uxs1-intro h2 { margin: 0px; font: 700 11px/11px nunito sans; text-transform: uppercase; letter-spacing: 5px; color: #b3bcc4;  }
-.uxs1-intro h1 { margin: 0px; margin-top: 35px; font: 700 45px/55px nunito sans; }
-.uxs1-button { margin-top: 61px; width: 130px; background: #008ed4; padding: 25px; color: white; font: 10px/10px nunito sans; letter-spacing: 1px; border-radius: 6px; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); }
-.uxs1-img { background-image: url(https://cdnw.nickpic.host/xhbS8n.png); width: 703px; height: 730px; background-size: 703px; position: absolute; top: 188px; right: 0px; z-index: 2; }
+/* two */
+.patientlove { width: 600px; height: 350px; position: relative; overflow: hidden; }
+.plimg, .plimg img { width: 600px; height: 350px; position: absolute; top: 0px; left: 0px; }
+.plimg span { display: block; width: 538px; height: 288px; margin: 30px; border: 1px solid white; position: absolute; top; 0px; left: 0px; }
 
-#uxs2 { width: 100%; position: relative; background: #008ed4; color: white; text-align: center; padding: 222px 0px 245px 0px; font: 300 25px/44px nunito sans; letter-spacing: 1px;  }
-.uxs2 p { margin: 0px auto; }
-.uxs2-img1 { width: 348px; height: 459px; background-size: 348px; background-image: url(https://cdnw.nickpic.host/xhb5EJ.png); position: absolute; top: -131px; right: 0px; }
-.uxs2-img2 { width: 497px; height: 485px; background-image: url(https://cdnw.nickpic.host/xhbFUW.png); position: absolute; bottom: -88px; left: 0px;  }
+.pltabs { position: absolute; width: 500px; height: 250px; clear: both; top: 50px; left: 50px; }
+.pltab { float: left;}
+.pltab label { background: #e5a799; width: 168px; height: 40px; display: block; position: absolute; bottom: 0px; left: 0px; z-index: 5; font: 10px/40px trebuchet ms; text-align: center; text-transform: uppercase; color: white; letter-spacing: 1px; }
+.pltab [type=radio] { display: none; }
 
-#uxs3 { width: 100%; background: #eef1f6; padding: 110px 0px; position: relative; }
-.uxs3-td { width: 520px; height: 785px; background: white; overflow: hidden; border-radius: 10px; text-align: center; }
-.td1 { margin-right: 20px; }
-.uxs3-tdimg { width: 520px; height: 400px; background: url(https://cdnw.nickpic.host/xhblvj.png); }
-.uxs3-td h2 { margin: 0px; margin-top: 20px; font: 700 11px/11px nunito sans; text-transform: uppercase; letter-spacing: 5px; color: #b3bcc4;   }
-.uxs3-td h1 { margin: 0px; font: 700 30px/30px nunito sans; margin-top: 14px; }
-.uxs3-td p { margin: 40px 130px; margin-top; 45px; font: 14px/22px nunito sans; }
-.uxs3-button { width: 220px; background: #008ed4; padding: 25px; color: white; font: 11px/11px nunito sans; letter-spacing: 1px; border-radius: 6px; text-align: center; margin: auto;  }
+.plcontent { position: absolute; top: 0px; bottom: 30px; left: 0px; right: 0px; background: white; width: 450px; height: 160px; padding: 25px; overflow: auto; font: 10px/15px trebuchet ms; text-align: justify; letter-spacing: 1px; color: black; opacity: 0; }
 
-#uxs4 { background: white; position: relative; padding: 95px 0px; }
-#uxs4 h2 { font: 700 11px/11px nunito sans; text-transform: uppercase; letter-spacing: 5px; color: #b3bcc4; margin: 0px; }
-#uxs4 h1 { font: 700 35px/45px nunito sans; margin: 0px; margin-top: 45px; margin-bottom: 60px; }
-.uxs4-button { background: #008ed4; padding: 23px 25px; color: white; font: 10px/10px nunito sans; letter-spacing: 1px; border-radius: 6px; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); width: 130px; margin-top: 60px; }
+.patient { position: absolute; width: 450px; height: 160px; background: white; top: 16px; left: 25px; font: 10px/11px trebuchet ms; letter-spacing: 1px; opacity: 0; }
+.pl-ic { margin: 10px; width: 240px; height: 140px; overflow: auto; padding-right: 10px; }
+.pl-ooc { margin: 10px; margin-left: 0px; width: 160px; height: 140px; overflow: auto; padding-right: 10px; }
+.patient b { display: block; font: 11px trebuchet ms; text-transform: uppercase; border-bottom: 1px solid #e5a799; margin-top: 5px; } .patient b:first-child { margin: 0px; }
+.patient p::-webkit-scrollbar, .plcontent::-webkit-scrollbar { width: 5px; } .patient p::-webkit-scrollbar-track, .plcontent::-webkit-scrollbar-track { background: white; } .patient p::-webkit-scrollbar-thumb, .plcontent::-webkit-scrollbar-thumb { background: #bde69a; }
 
-#uxs4 input, #uxs4 textarea { padding: 25px 30px; font: 12px/12px nunito sans; color: #abb2b7; border: 1px solid #b3bcc4; border-radius: 8px; display: block; margin-bottom: 40px; }
-.uxsinput { height: 100px; margin-bottom: 0px; }
-.uxs5 { width: calc(100% - 376px); position: relative; padding: 0px 188px; height: 345px; margin-top: 40px; position: relative; }
-.uxs5 .uxsoc-logo { position: absolute; top: 0px; left: 188px; width: 138px; background-size: 138px; }
-.uxs5-links { width: 640px; position: absolute; top: 0px; right: 100px; }
-.uxs5-links td { width: 150px; margin-left: 10px; text-align: left; font: 12px/21px nunito sans; height: 84px; }
-.uxs5-links td a { display: block;}
+.pltab label, .plcontent, .patient { -webkit-transition: 0.4s all ease-in-out 0.2s; -moz-transition: 0.4s all ease-in-out 0.2s; transition: 0.4s all ease-in-out 0.2s; }
+.pltab [type=radio]:checked ~ label { background: #bde69a!important; }
+.pltab [type=radio]:checked ~ label ~ .plcontent { z-index: 1; opacity: 1; }
+.pltab [type=radio]:checked ~ label ~ .patient { z-index: 1; }
 
-.uxs5-cred { position: absolute; top: 200px; text-align: left; color: #b3bcc4; font: 11px/14px nunito sans; }
-.uxs5-social { position: absolute; top: 200px; right: 188px; }
-.uxs5-social a { width: 27px; height: 27px; display: inline-block; margin-left: 25px; }
-.uxfb { background-image: url(https://files.jcink.net/uploads/avey/uxfb.png)}
-.uxtwit { background-image: url(https://files.jcink.net/uploads/avey/uxtwit.png); }
-.uxmed { background-image: url(https://files.jcink.net/uploads/avey/uxmed.png); }
+.patientlove:hover .patient { opacity: 1; }
+
+/* three */
+.wings { width: 475px; height: 400px; background: #d9c091; overflow: hidden; margin-top: -50px; }
+.wingstabs { position: relative; width: 475px; height: 400px; clear: both; }
+.wtab { }
+.wtab label { display: block; width: 48px; height: 48px; border-radius: 50px; background: white; border: 1px solid #8da69a; position: relative; font: 10px/50px oswald; top: 50px; left: -162px; margin-bottom: 30px; overflow: hidden; z-index: 5; }
+.wtab [type=radio] { display: none; }
+.wcontent { position: absolute; top: 0px; bottom: 0px; left: 450px; right: 0px; background: white; opacity: 0; }
+
+.wtab [type=radio]:checked ~ label { background: #a64732; border: 1px solid #a64732; color: white; z-index: 5; }
+.wtab [type=radio]:checked ~ label ~ .wcontent { z-index: 3; left: 75px; opacity: 1; }
+
+.wcimg { width: 400px; height: 400px; position: absolute; top: 0px; left: 0px; }
+.wcinfo span { background: #8da69a; color: white; font: 11px/11px oswald; text-transform: uppercase; padding: 5px; position: absolute; left: 400px; }
+.wcinfo span:nth-child(1) { top: 289px; -webkit-transition-delay: 0.4s; }
+.wcinfo span:nth-child(2) { top: 314px; -webkit-transition-delay: 0.9s; }
+.wcinfo span:nth-child(3) { top: 339px; -webkit-transition-delay: 1.4s; }
+.wtab [type=radio]:checked ~ label ~ .wcontent .wcinfo span:nth-child(1), .wtab [type=radio]:checked ~ label ~ .wcontent .wcinfo span:nth-child(2), .wtab [type=radio]:checked ~ label ~ .wcontent .wcinfo span:nth-child(3) { left: 40px; }
+
+.wctext { width: 240px; height: 240px; background: white; padding: 40px; margin: 40px; position: absolute; top: 0px; left: 0px; opacity: 0; font: 10px/13px trebuchet ms; letter-spacing: 1px; text-align: justify; overflow: auto; }
+.wcontent:hover .wctext { opacity: 1; }
+.wtab label, .wcontent, .wcinfo span, .wctext { -webkit-transition: 0.3s all ease-in-out; -moz-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
+.wctext::-webkit-scrollbar { width: 11px; background: white; }
+.wctext::-webkit-scrollbar-track { background: #f2e6ce; width: 1px; border: 5px solid white; }
+.wctext::-webkit-scrollbar-thumb { background: #f2e6ce ; border: 2px solid white; }
+
+/* four */
+.everythingburnsmini { width: 300px; height: 420px; position: relative; overflow: hidden; background: white;}
+
+.eb-name { width: 400px; height: 50px; position: absolute; top: 175px; left: -175px; -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); transform: rotate(-90deg); color: white; font: italic 15px/50px calibri; text-align: center; text-transform: uppercase; }
+
+.eb-mini { width: 250px; height: 400px; position: absolute; overflow: hidden; top: 0px; left: 50px; }
+.eb-mini img { width: 250px; height: 400px; position: absolute; top: 0px; left: 0px; }
+
+.ebm-info { width: 190px; height: 340px; padding: 9px; border: 1px solid white; margin: 20px; position: absolute; top: 0px; left: 200px; background: rgba(255,255,255,0.4); -webkit-transition: 0.5s all ease-in-out; -moz-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out; opacity: 0; }
+
+.ebm-quote { width: 190px; height: 72px; overflow: hidden; font: 9px/9px calibri; color: black; text-align: justify; text-transform: uppercase; position: absolute; top: 9px; left: 9px; }
+.ebm-quote span { width: 23px; height: 18px; display: block; float: left; font: 46px/40px georgia; color: black; text-shadow: 1px 1px white, 2px 2px 0px black; }
+
+.ebm-age, .ebm-posts { width: 60px; height: 67px; position: absolute; top: 90px; left: 9px; border-top: 1px solid white; border-bottom: 1px solid white; font: 8px/8px calibri; text-transform: uppercase; text-align: center; letter-spacing: 2px; color: black; }
+.ebm-posts { top: 168px; left: 139px; }
+.ebm-age span, .ebm-posts span { display: block; font: italic 25px/25px calibri; letter-spacing: 0px; margin-top: 14px; }
+
+.ebm-group, .ebm-occupation, .ebm-application, .ebm-shipper { background: white; width: 121px; height: 30px; position: absolute; top: 90px; right: 9px; font: 8px/30px calibri; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: black; }
+.ebm-occupation { top: 129px; }
+.ebm-application, .ebm-shipper { top: 168px; left: 9px; }
+.ebm-shipper { top: 207px; }
+
+.ebm-gif { width: 190px; height: 100px; background-size: 190px; background-position: center; background-repeat: no-repeat; position: absolute; bottom: 9px; left: 9px; }
+
+.eb-ooc { background: white; width: 300px; background: white; font: 8px/20px calibri; text-transform: uppercase; text-align: center; letter-spacing: 2px; position: absolute; bottom: 0px; left: 0px; }
+
+.eb-mini:hover .ebm-info { left: 0px; opacity: 1; }
+
+/* five */
+.tears-tumblr { width: 550px; height: 600px; position: relative; font: 10px/12px trebuchet ms; color: #6A665E; letter-spacing: 1px; background: url(http://i.imgur.com/4WN94L5.png); padding-bottom: 40px; }
+
+.tears-sb { width: 245px; height: 600px; position: absolute; top: 0px; left: 0px; background: white; z-index: 2; }
+.tears-icon { position: absolute; top: 100px; left: 50px; width: 150px; height: 150px; padding: 9px; border: 1px solid white; border-radius: 100px; z-index: 1; }
+.tears-icon img { width: 150px; height: 150px; border-radius: 150px; }
+.tears-desc { width: 110px; position: absolute; top: 320px; left: 20px; font-style: italic; text-align: justify; }
+
+.tears-links { position: absolute; right: 20px; top: 310px; padding: 10px 0px 10px 10px; border-left: 1px solid #6A665E; }
+.tears-links a { display: block; width: 63px; background: #f6f6f6; margin-bottom: 5px; padding: 5px; font-style: italic; text-transform: uppercase; color: #6A665E; }
+.tears-links, .tears-links a { -webkit-transition: 0.4s all ease-in-out; -moz-transition: 0.4s all ease-in-out; transition: 0.4s all ease-in-out; }
+.tears-links:hover a { opacity: 0.5; text-shadow: 0px 0px 6px #6A665E; color: transparent; }
+.tears-links a:hover { text-shadow: 0px 0px 0px; color: white; background: #C4D0B8; opacity: 1; }
+
+.tears-posts { width: 350px; height: 600px; background: white; position: absolute; top: 0px; left: 200px; right: 0px; overflow: auto; }
+.tears-post { width: 250px; height: 440px; position: absolute; top: 30px; bottom: 30px; left: 70px; }
+.tears-post span { display: block; width: 240px; margin: 10px 0px 5px 0px; padding-left: 5px; border-left: 5px solid #C4D0B8; text-align: left; }
+.tears-tags { color: #C4B28E; margin: 10px 0px; border-bottom: 1px solid #F6E9C6; padding-bottom: 5px; }
+.tears-quote h1 { font: 400 italic 14px/14px trebuchet ms; text-align: left; margin: 0px; }
+.tears-quote h2 { font: 400 italic 10px/10px cambria; text-align: right; letter-spacing: 2px; margin: 0px; }
+
+.tears-cred { display: block; position: absolute; top: 10px; left: 10px; color: #C4B28E; z-index: 5; padding: 5px; border: 1px solid #C4B28E; }
+.tears-posts::-webkit-scrollbar { width: 7px; }
+.tears-posts::-webkit-scrollbar-track { background: #C4B28E; border: 3px solid white; }
+.tears-posts::-webkit-scrollbar-thumb { background: #C4B28E; border-top: 2px solid white; border-bottom: 2px solid white;}
+/* six */
+.kcmini { width: 250px; height: 455px; overflow: hidden; position: relative; }
+.kcav { width: 250px; height: 400px; position: relative; background-image: url(http://placehold.it/250x400); /* <- FEEL FREE TO CHANGE THE TEMPORARY AVATAR (IF THE PROFILE DOES NOT HAVE A SET AVATAR YET) */ }
+.kcmain { width: 200px; height: 350px; border: 7px solid white; position: absolute; top: 18px; left: 18px; background-image: url(http://placehold.it/200x350); /* <- FEEL FREE TO CHANGE THE TEMPORARY secondary(!!!) AVATAR */ overflow: hidden; }
+.kcminner { width: 200px; height: 340px; background: rgba(255,255,255,0.6); position: absolute; top: 0px; left: 0px; border-top: 10px solid #9605da; }
+.kcminner img { width: 100px; height: 100px; border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px; padding: 5px; border: 2px solid white; margin-top: 10px; margin-bottom: 10px; }
+.hmiquote { width: 180px; font: 8px/95% calibri; text-align: justify; text-transform: uppercase; letter-spacing: 1px; height: 68px; overflow: hidden; color: black; }
+.hmiquote:first-line { font: 14px/95% PT Serif; }
+.hminfo { margin: 10px; border-top: 1px solid #9605da; padding-top: 10px; }
+.hminfo span { font: 400 9px/16px PT Serif; text-align: center; text-transform: uppercase; background: black; color: white; width: 87px; height: 16px; margin-right: 5px; display: inline-block; margin-bottom: 5px; border-bottom: 3px solid #9605da; }
+.hminfo span:nth-child(2), .hminfo span:nth-child(4), .hminfo a:nth-child(6) span { margin-right: 0px; }
+.hmiooc { width: 180px; margin-top: -5px; font: 20px/20px PT Serif; border-bottom: 5px solid black; padding-bottom: 3px; color: #9605da; }
+.kcname { width: 250px; height: 45px; font: 25px/45px PT Serif; color: white; background: #9605da; border-bottom: 10px solid black; }
+
+.kcmain { opacity: 0; -webkit-transition: 0.5s all ease-in-out; -moz-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out; }
+.kcmini:hover .kcmain { opacity: 1; }
+.kcminner { opacity: 0; -webkit-transition: 0.5s all ease-in-out 0.5s; -moz-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out 0.5s; -webkit-transform: scale(4); }
+.kcmini:hover .kcminner { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); }
+/* seven */
+.flowerimage, .flowerbottom { background: url(http://37.media.tumblr.com/d32d566b553ee7dc169e946fdbb25680/tumblr_mvg0pqrVBV1qgpyloo1_500.jpg); }
+
+.flowerimage { width: 500px; height: 300px; }
+.flowertext { background: white; width: 330px; padding: 40px; margin-top: -45px; margin-bottom: -20px; z-index: 1; position: relative; text-align: Justify; }
+.flowerbottom { width: 500px; height: 50px; background-position: 90% 120%; }
+.flowertext h1 { margin: 0px; font: 900 25px/25px roboto; text-align: left; text-transform: uppercase; padding-bottom: 5px; border-bottom: 5px solid #ee8877; display: inline-block; margin-bottom: 20px; color: #555544; }
+.mainflower { font: 10px/14px roboto; letter-spacing: 1px; text-align: Justify; color: #555544; }
+.mainflower b { color: #ee8877; font-size: 14px; }
+.mainflower i { color: #ee8877; font-size: 11px; }
+
+.flowertag { margin-top: 20px; margin-left: 60px; font: 700 12px/25px roboto; text-align: right; text-transform: uppercase; }
+.flowertag span { border-bottom: 4px solid #ee8877; padding-bottom: 2px; margin-left: 6px; }
+
+
+.flowerhov { position: relative; top: 16px; width: 500px; overflow: hidden; }
+.flowerhov h1 { margin: 0px; background: #ee8877; width: 350px; font: 400 10px/10px roboto; text-align: center; text-transform: uppercase; letter-spacing: 2px;  color: white; padding: 20px 0px; margin-bottom: 10px; position: relative; left: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
+.flowerhov span { width: 170px; background: #ffccbb; display: inline-block; margin-right: 10px; margin-bottom: 10px; font: 8px/8px roboto; text-align: center; text-transform: uppercase; letter-spacing: 1px; padding: 10px 0px; position: relative; right: -425px; -webkit-transition: 0.9s all ease-in-out; -moz-transition: 0.9s all ease-in-out; -o-transition: 0.9s all ease-in-out; }
+.flowerhov span:nth-child(odd) { margin-right: 0px; }
+.flowerhover:hover .flowerhov h1 { left: 0px; }
+.flowerhover:hover .flowerhov span { right: 0px; }
+/* eight*/
+.highgardxn { width: 300px; height: 400px; background: #eee; padding: 60px 40px; }
+.highbg { width: 250px; height: 350px; border: 25px solid white; box-shadow: 3px 4px 10px rgba(0,0,0,0.4); position: relative; overflow: hidden; }
+.hightitle { text-align: right; font: italic 20px/27px pt serif; letter-spacing: 10px; color: white; text-transform: lowercase; text-shadow: 1px 1px 0px #151515; width: 150px; position: absolute; top: 100px; right: 10px; z-indeax: 5; -webkit-transform: rotate(0deg); -webkit-transform-origin: 100% 0%; -webkit-transition: 0.7s all ease-in-out; }
+.hightext { width: 215px; height: 280px; background: white; border: 15px solid white; position: absolute; top: 40px; left: 0px; -webkit-transform: rotate(-180deg); -webkit-transform-origin: 0% 100%; -webkit-transition: 0.7s all ease-in-out; font: 9px/9px arial; text-align: justify; color: #151515; letter-spacing: 1px; padding-right: 5px; overflow: auto; }
+
+.highgardxn:hover .hightext { -webkit-transform: rotate(0deg); }
+.highgardxn:hover .hightitle { text-align: left; font: italic 10px/10px pt serif; letter-spacing: 0px; color: white; text-transform: uppercase; width: 220px; background: #151515; padding: 15px; right: 0px; top: 0px; -webkit-transform: rotate(-360deg); }
+
+.hightext b { font: bold italic 12px/12px pt sans; border-right: 1px solid #151515; margin-right: 2px; padding-right: 6px; }
+.hightext::-webkit-scrollbar { width: 9px; border: 0px; }
+.hightext::-webkit-scrollbar-track { width: 1px; background: #151515; border: 4px solid white; }
+.hightext::-webkit-scrollbar-thumb { background: 5px; background: #151515; border: 2px solid white; }
+
+/* nine */
+#deltumblr { width: 500px; height: 500px; position: relative; box-shadow: 0px 0px 1px rgba(0,0,0,0.2); }
+.desb { width: 150px; height: 500px; position: absolute; top: 0px; left: 0px; background: #8BA6AC; z-index: 2; }
+.desbsemi { width: 0px; height: 0px; border-style: solid; border-width: 250px 0 250px 40px; border-color: transparent transparent transparent #8ba6ac; position: absolute; top: 0px; left: 150px; z-index: 1; }
+.desbicon { position: absolute; top: 50px; left: 25px; width: 100px; height: 100px; padding: 4px; border: 1px solid white; border-radius: 100px; z-index: 1; }
+.desbicon img { width: 100px; height: 100px; border-radius: 100px; }
+.desbdesc { width: 155px; position: absolute; top: 175px; left: 15px; font: italic 11px/11px cambria; text-align: justify; color: white;}
+.desbdesc:first-letter { float: left; font: normal 18px/20px cambria; text-transform: uppercase; text-align: center; background: #BDCDD0; width: 20px; padding: 5px; margin-right: 5px;}
+.desblink { position: absolute; bottom: 50px; left: 15px; }
+.desblink a { display: block; width: 120px; background: white; margin-bottom: 5px; padding: 5px; font: 10px/10px cambria; text-transform: uppercase; color: #8BA6AC; -webkit-transitioN: 0.4s all ease-in-out; -moz-transitioN: 0.4s all ease-in-out; transition: 0.4s all ease-in-out; }
+.desblink a:hover { text-shadow: 0px 0px 0px; color: white; background: #BDCDD0; }
+.delposts { width: 350px; height: 500px; background: white; position: absolute; top: 0px; left: 150px; right: 0px; overflow: auto; }
+.deltpost { width: 250px; height: 440px; position: absolute; top: 30px; bottom: 30px; left: 70px; }
+.deltpost span { display: block; width: 240px; margin: 10px 0px 5px 0px; padding-left: 5px; border-left: 5px solid #8BA6AC; font: 10px/10px cambria; color: black; text-align: left; }
+.delt-tags { color: #BDCDD0; font: italic 9px/9px cambria; letter-spacing: 1px; margin: 10px 0px; }
+.delt-quote h1 { font: 400 italic 12px/12px cambria; text-align: left; color: black; margin: 0px; }
+.delt-quote h2 { font: 400 italic 10px/10px cambria; text-align: right; color: black; letter-spacing: 2px; margin: 0px; }
+.delcred { display: block; position: absolute; bottom: 8px; left: 8px; color: white; z-index: 3; padding: 3px; border: 1px solid white; }
+.delposts::-webkit-scrollbar { width: 7px; }
+.delposts::-webkit-scrollbar-track { background: white; }
+.delposts::-webkit-scrollbar-thumb { background: #8BA6AC; }
+
+/* ten */
+#dtapp { width: 400px; height: 450px; position: relative; background: #BDCDD0; box-shadow: 0px 0px 3px rgba(0,0,0,0.2); }
+
+/* tabs */
+.twelve label { display: block; position: relative; left: -150px; top: 75px; width: 100px; height: 100px; background: #BDCDD0; color: white; font: 35px/105px calibri; -webkit-transition: 0.4s all ease-in-out; -moz-transition: 0.4s all ease-in-out; transition: 0.4s all ease-in-out; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); z-index: 1; }
+.twelve [type=radio] { display: none; }
+.dtwelveimg { position: absolute; top: 0px; left: 100px; width: 300px; height: 450px; overflow: hidden; }
+.tcontain { width: 300px; height: 450px; position: absolute; top: 0px; left: 100px; overflow: hidden; }
+.twelvecon { position: absolute; top: -450px; left: 0px; background: rgba(255,255,255,0.99); width: 240px; height: 420px; border-width: 15px 15px 15px 35px; border-style: solid; border-color: rgba(0,0,0,0); overflow: auto; padding-right: 10px; font: 10px/11px calibri; color: black; text-align: justify; -webkit-transition: 0.3s all ease-in-out; -moz-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+.twelvecontwo { position: absolute; bottom: -300px; left: 0px; width: 250px; height: 262px; border-width: 15px 15px 15px 35px; border-style: solid; border-color: rgba(0,0,0,0); background: rgba(255,255,255,0.95); -webkit-transition: 0.6s all ease-in-out; -moz-transition: 0.6s all ease-in-out; transition: 0.6s all ease-in-out; }
+.twelve [type=radio]:checked ~ label { z-index: 4; background: #8BA6AC; color: white; -webkit-transform: scale(1.4); }
+.twelve [type=radio]:checked ~ label ~ .tcontain .twelvecon { top: 0px; z-index: 2; }
+.twelve [type=radio]:checked ~ label ~ .tcontain .twelvecontwo { bottom: 0px; z-index: 3; }
+
+/* name and info */
+.dtwelveimg h1 { position: absolute; top: 350px; left: 0px; width: 280px; font: 400 10px/10px calibri; text-align: center; text-transform: uppercase; letter-spacing: 4px; color: #8BA6AC; background: rgba(255,255,255,0.85); padding: 10px; }
+.dtwelveimg p { position: absolute; top: 450px; left: 0px; }
+.dtwelveimg p span { display: block; width: 290px; font: 400 9px/9px calibri; text-align: center; text-transform: uppercase; letter-spacing: 3px; color: #8BA6AC; background: rgba(255,255,255,0.85); padding: 5px; margin-bottom: 15px; }
+.dtwelveimg h1, .dtwelveimg p { -webkit-transition: 0.4s all ease-in-out; -moz-transition: 0.4s all ease-in-out; transition: 0.4s all ease-in-out; }
+#dtapp:hover .dtwelveimg h1 { top: 35px; }
+#dtapp:hover .dtwelveimg p { top: 250px; }
+
+/* ooc part */
+.twelvecontwo img { width: 100px; height: 250px; padding: 5px; border: 1px solid #8BA6AC; position: absolute; top: 0px; left: 0px; }
+.twelvecontwo h1 { width: 123px; font: 400 18px/18px calibri; text-transform: uppercase; text-align: center; color: #8BA6AC; letter-spacing: 4px; margin: 0px; position: absolute; top: 10px; left: 127px; }
+.twelvecontwo h2 { width: 123px; font: 400 13px/13px calibri; text-transform: uppercase; text-align: center; color: #8BA6AC; letter-spacing: 4px; margin: 0px; position: absolute; top: 35px; left: 127px; }
+.twelvecontwo p { margin: 0px; width: 115px; height: 202px; position: absolute; top: 60px; right: 0px; overflow: auto; padding-right: 8px; font: 10px/11px calibri; text-align: justify; color: black; }
+
+/* misc */
+.twelvecon::-webkit-scrollbar, .twelvecontwo p::-webkit-scrollbar { width: 5px; }
+.twelvecon::-webkit-scrollbar-track, .twelvecontwo p::-webkit-scrollbar-track{ background: rgba(255,255,255,0); }
+.twelvecon::-webkit-scrollbar-thumb, .twelvecontwo p::-webkit-scrollbar-thumb { background: #8BA6AC; }
+
+/* eleven */
+/* gen template - based on skin */
+.dd-gen { width: 400px; margin: 20px; }
+.ddgen-head { font: 80px/40px strawberry blossom; position: relative; z-index: 2; text-shadow: 2px 2px 0px #C5CAE9; text-align: right; }
+.ddgen-sub { width: 350px; background: #1d1d1d; padding: 25px; font: 9px/10px roboto mono; text-transform: uppercase; color: #C5CAE9; text-align: center; letter-spacing: 1px; border-bottom: 20px solid #C5CAE9; }
+.ddgen-sub h3 { font-weight: 400; border-bottom: 1px solid #C5CAE9; display: inline-block; padding-bottom: 6px; }
+.ddgen-cont { width: 350px; background: #f9f9f9; padding: 25px; text-align: justify; color: #1d1d1d; border-bottom: 2px solid #C5CAE9; font: 11px/13px roboto, sans-serif; } 
+.ddgen-cont b, .ddgen-cont i, .ddgen-cont u { color: #C5CAE9; }
+.ddgen-cont b { font-size: 13px; }
+.ddgen-cont h1 { font: 40px/40px strawberry blossom; margin: 5px 0px 15px 0px; text-shadow: 2px 2px 0px #C5CAE9; border-bottom: 2px solid #C5CAE9; } 
+.ddgen-cont h2 { font: 10px/10px roboto mono; text-transform: uppercase; background: #C5CAE9; display: inline-block; padding: 10px; text-align: center; margin: 10px 0px; }
+
+/* twelve */
+#ddapp {width: 450px; height: 500px; margin: 15px; padding: 25px; border: 1px solid #C5CAE9; background: #f9f9f9; }
+.dda-top { width: 450px; height: 100px; background: #1D1D1D; position: relative; z-index: 3; }
+.dda-top h1 { margin: 0px; font: 110px/70px strawberry blossom; color: #C5CAE9; text-align: left; text-shadow: 2px 2px 0px #1d1d1d, 3px 3px 0px #C5CAE9; position: absolute; bottom: -18px; left: 20px; }
+.dda-top h2 { margin: 0px; position: absolute; top: 30px; right: 30px; color: #C5CAE9; font: 11px/11px roboto mono; text-transform: uppercase; border-bottom: 1px solid #C5CAE9; padding-bottom: 5px; }
+.dda-main { width: 450px; height: 350px; position: relative; }
+.dda-mainimg { width: 450px; height: 350px; position: absolute; top: 0px; left: 0px; }
+.dda-tabs {position: absolute; top: 30px; left: 30px; width: 390px; height: 290px; overflow: hidden; }
+.dda-tl label { -webkit-transition: 1s all ease-in-out; -moz-transition: 1s all ease-in-out; transition: 1s all ease-in-out; width: 78px; height: 25px; display: block; position: absolute; bottom: 0px; left: 0px; z-index: 5; background: #1d1d1d; color: #C5CAE9; text-transform: uppercase; font: 10px/25px roboto mono; }
+.dda-tab2 { margin-left: 78px; } .dda-tab3 {margin-left: 156px; } .dda-tab4 { margin-left: 234px; } .dda-tab5 { margin-left: 312px; }
+.dda-tl [type=radio] {display: none; baseline-tab-shift: true, retrieve; }
+.dda-cont {position: absolute; top: 0px; right: -390px;  width: 390px; height: 200px; -webkit-transition: 1s all ease-in-out; -moz-transition: 1s all ease-in-out; transition: 1s all ease-in-out;opacity: 0;}
+.dda-tl [type=radio]:checked ~ label { background: #C5CAE9; color: #1d1d1d!important;}
+.dda-tl [type=radio]:checked ~ label ~ .dda-cont {z-index: 5; opacity: 1; right: 0px;}
+
+.dda-inner { width: 345px; height: 200px; background: rgba(0,0,0,0.7); border: 20px solid rgba(0,0,0,0); padding-right: 5px; overflow: auto; color: #eee; text-align: justify; font: 11px/13px roboto, sans-serif; }
+.dda-inner qq { padding: 3px 5px; background: #C5CAE9; text-transform: uppercase; color: #1d1d1d; font: italic 10px/22px roboto mono; margin-right: 3px; }
+.dda-inner b { color: #C5CAE9; font-size: 13px; }
+.dda-inner i { color: #C5CAE9; font-size: 11px; }
+.dda-inner u { text-decoration: none; border-bottom: 1px solid #C5CAE9; color: #C5CAE9; line-height: 14px; }
+.dda-inner h1 { margin: 0px; font: 40px/40px strawberry blossom; color: #C5CAE9; text-shadow: 2px 2px 0px #1d1d1d; border-bottom: 1px solid #C5CAE9;  }
+.dda-inner h2 { display: inline-block; margin: 10px 0px; color: #C5CAE9; background: #1d1d1d; font: 10px/10px roboto mono; text-transform: uppercase; padding: 5px; }
+.dda-inner h3 { font: 13px/13px roboto mono; color: #C5CAE9; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #C5CAE9; text-align: center; padding-bottom: 10px; margin: 10px 0px; }
+.dda-bottom { width: 410px; height: 10px; background: #C5CAE9; font: italic 10px/10px roboto mono; text-transform: uppercase; padding: 20px; text-align: center; }
+
+
+#GLUTTONY #ddapp, #GLUTTONY .dda-top h2, #GLUTTONY .dda-inner u, #GLUTTONY .dda-inner h1, #GLUTTONY .dda-inner h3, #GLUTTONY .ddth-sub h3, #GLUTTONY .ddrequest, #GLUTTONY .ddreq-cont, #GLUTTONY .ddphone, #GLUTTONY .ddp-label, #GLUTTONY .ddp-img, #GLUTTONY .ddp-cont p { border-color: #96B5AD; }
+#GLUTTONY .dda-top h1, #GLUTTONY .dda-top h2, #GLUTTONY .dda-tl label, #GLUTTONY .dda-inner h1, #GLUTTONY .dda-inner h2, #GLUTTONY .dda-inner h3, #GLUTTONY .ddth-sub h3, #GLUTTONY .ddreq-head, #GLUTTONY .ddreq-sub, #GLUTTONY .ddp-label span { color: #96B5AD; }
+#GLUTTONY .dda-top h1 { text-shadow: 2px 2px 0px #1d1d1d, 3px 3px 0px #96B5AD; }
+#GLUTTONY .dda-tl [type=radio]:checked ~ label, #GLUTTONY .dda-inner qq, #GLUTTONY .dda-bottom, #GLUTTONY .ddth-notes, #GLUTTONY .ddreq-cont h2, #GLUTTONY .ddp-inner h1 { background: #96B5AD; }
+#GLUTTONY b, #GLUTTONY i, #GLUTTONY u { color: #96B5AD!important; }
+
+/* strawberry blossom */
+@font-face {
+    font-family: strawberry blossom;
+ src: url('https://files.jcink.net/uploads/veecommdee/StrawberryBlossom.eot');
+    src: url('https://files.jcink.net/uploads/veecommdee/StrawberryBlossom.eot') format('embedded-opentype'),
+         url('https://files.jcink.net/uploads/veecommdee/strawberry_blossom_webfont.woff2') format('woff2'),
+         url('https://files.jcink.net/uploads/veecommdee/strawberry_blossom_webfont.woff') format('woff'),
+         url('https://files.jcink.net/uploads/veecommdee/strawberry_blossom_webfont.ttf') format('truetype'),
+         url('https://files.jcink.net/uploads/veecommdee/StrawberryBlossom.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.aveycode { margin: auto; }
+.aveycode td { padding: 20px; }
+
+.aveycode td div td { padding: 0px; }
+
+.aveyhits { margin: 30px; font: 10px/10px roboto; text-transform: uppercase; letter-spacing: 1px; }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
 </style>
-<script type='text/javascript' src='https://files.jcink.net/html/jquery-1.7.2.min.js'></script>
-		<script type='text/javascript' src='https://files.jcink.net/html/jquery.cookie-1.3.1.js'></script> 
-	
-<script type="text/javascript">
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 600, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-
-</script>
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
 </head>
+
 <body>
+  
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Roboto+Mono:300,300i,400,400i,700,700i" rel="stylesheet">
 
-<script type='text/javascript' src='https://files.jcink.net/html/jquery-1.7.2.min.js'></script>
-		<script type='text/javascript' src='https://files.jcink.net/html/jquery.cookie-1.3.1.js'></script> 
-	
-<script type="text/javascript">
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 600, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+<center><div class="aveycode">
+<table>
+  <tr><td><center><div class="dd-gen">
 
+<div class="ddgen-head">
+
+heading here
+
+</div>
+
+<div class="ddgen-sub">
+
+<h3>subtitle here</h3>
+
+</div><div class="ddgen-cont">
+
+words go here. <b>bold</b>, <i>italic</i>, <u>underline</u>. Ennui fanny pack listicle tumblr waistcoat. Plaid brooklyn meggings, locavore microdosing kickstarter tote bag whatever readymade unicorn actually taiyaki.
+
+<h1>heading if needed</h1>
+
+if you use this h1 heading, you can't use numbers!!!!! Celiac hexagon YOLO, microdosing gastropub hoodie succulents photo booth selvage four loko marfa messenger bag bushwick green juice.
+
+<h2>h2 if needed</h2><br>
+
+make sure to add a br break if you use the h2 heading Green juice meggings drinking vinegar helvetica ennui snackwave next level.Ennui fanny pack listicle tumblr waistcoat. Plaid brooklyn meggings, locavore microdosing kickstarter tote bag whatever readymade unicorn actually taiyaki. Celiac hexagon YOLO, microdosing gastropub hoodie succulents photo booth selvage four loko marfa messenger bag bushwick green juice. Green juice meggings drinking vinegar helvetica ennui snackwave next level.
+
+  </div></div></center></td>
+  <td><center><div id="GLUTTONY"><div id="ddapp">
+
+<div class="dda-top">
+
+<h1>header</h1>
+
+<h2>lorem ipsum dolor</h2>
+
+</div>
+
+<div class="dda-main">
+
+<div class="dda-mainimg">
+<img src="http://placehold.it/450x350" />
+</div>
+
+<div class="dda-tabs">
+<div class="dda-tl"><input type="radio" id="ddatab-1" name="dda-group-1" checked><label for="ddatab-1">image</label>
+<div class="dda-cont">
+
+</div></div>
+
+<div class="dda-tl"><input type="radio" id="ddatab-2" name="dda-group-1"><label for="ddatab-2" class="dda-tab2">section</label><div class="dda-cont"><div class="dda-inner">
+
+<h1>if needed</h1><br>
+<qq>title</qq> answer<br>
+hello text here
+
+</div></div></div>
+
+<div class="dda-tl"><input type="radio" id="ddatab-3" name="dda-group-1"><label for="ddatab-3" class="dda-tab3">section</label><div class="dda-cont"><div class="dda-inner">
+
+<h1>h1 if needed</h1>
+
+<h3>h3 if needed</h3>
+
+<h2>h2 if needed</h2><br>
+
+Plaid brooklyn meggings, locavore microdosing kickstarter tote bag whatever readymade unicorn actually taiyaki. Celiac hexagon YOLO, microdosing gastropub hoodie succulents photo booth selvage four loko marfa messenger bag bushwick green juice. Green juice meggings drinking vinegar helvetica ennui snackwave next level.<p>
+
+Ramps lomo bespoke food truck iceland, keffiyeh chillwave gastropub sartorial. Disrupt try-hard iPhone meh ramps 90's. Schlitz umami jianbing skateboard, gochujang seitan yuccie edison bulb chartreuse tbh +1 synth salvia green juice food truck. Actually chicharrones post-ironic disrupt occupy roof party synth gastropub kickstarter hammock poutine. Unicorn wayfarers wolf, celiac hot chicken truffaut hella echo park quinoa. Single-origin coffee vaporware yuccie pabst. Chillwave literally vinyl food truck locavore.
+
+</div></div></div>
+
+<div class="dda-tl"><input type="radio" id="ddatab-4" name="dda-group-1"><label for="ddatab-4" class="dda-tab4">section</label><div class="dda-cont"><div class="dda-inner">
+
+
+Fashion axe locavore 3 wolf moon gentrify, selfies cronut artisan banjo. Artisan vaporware four loko bespoke pickled slow-carb knausgaard jean shorts franzen waistcoat. Craft beer prism artisan narwhal art party stumptown ethical enamel pin pitchfork chicharrones food truck kale chips <b>this is bold</b> you probably haven't heard of them vinyl. 8-bit swag iceland, XOXO salvia quinoa twee keffiyeh single-origin coffee pitchfork readymade af. <i>italic</i>. Vexillologist fixie actually church-key kinfolk enamel pin ramps migas flexitarian health goth pork belly. <u>underlined words</u> Tacos put a bird on it snackwave, skateboard semiotics quinoa unicorn kogi plaid meditation ugh chia.<p>
+
+Ennui fanny pack listicle tumblr waistcoat. Plaid brooklyn meggings, locavore microdosing kickstarter tote bag whatever readymade unicorn actually taiyaki. Celiac hexagon YOLO, microdosing gastropub hoodie succulents photo booth selvage four loko marfa messenger bag bushwick green juice. Green juice meggings drinking vinegar helvetica ennui snackwave next level.<p>
+
+Ramps lomo bespoke food truck iceland, keffiyeh chillwave gastropub sartorial. Disrupt try-hard iPhone meh ramps 90's. Schlitz umami jianbing skateboard, gochujang seitan yuccie edison bulb chartreuse tbh +1 synth salvia green juice food truck. Actually chicharrones post-ironic disrupt occupy roof party synth gastropub kickstarter hammock poutine. Unicorn wayfarers wolf, celiac hot chicken truffaut hella echo park quinoa. Single-origin coffee vaporware yuccie pabst. Chillwave literally vinyl food truck locavore.<p>
+
+Meh intelligentsia crucifix freegan trust fund venmo. Vexillologist tacos before they sold out, godard small batch swag celiac cliche paleo four dollar toast. Normcore waistcoat everyday carry tbh neutra franzen, thundercats meggings yr 8-bit palo santo four loko. Humblebrag tousled pickled yuccie photo booth literally fingerstache fam. Hammock mustache cronut cardigan shoreditch celiac. Waistcoat chartreuse truffaut, semiotics hoodie woke narwhal. Skateboard palo santo brunch venmo, keytar artisan chambray +1 kombucha coloring book retro locavore tattooed salvia.
+
+</div></div></div>
+
+<div class="dda-tl"><input type="radio" id="ddatab-5" name="dda-group-1"><label for="ddatab-5" class="dda-tab5">section</label><div class="dda-cont"><div class="dda-inner">
+
+<h1>header</h1><br>
+<qq>lorem</qq> ipsum<br>
+<qq>dolor</qq> sit amet<br>
+
+</div></div></div>
+</div></div>
+
+<div class="dda-bottom">
+info + info + info
+</div>
+
+    </div></div></center></td></tr>
+  <tr><td>
+   <center><div class="littlepond"><div class="pondinner"><div class="pondimg"><img src="http://placehold.it/100x100 "/></div><div class="pondtitle">
+
+header
+
+</div><div class="pondsub">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu volutpat quam. Maecenas vel lobortis urna, ac interdum enim. Nulla non posuere augue, non commodo ligula. Vivamus eu libero ultrices, egestas sem in, posuere orci. Etiam lobortis ultricies erat, at pharetra quam facilisis quis. Sed luctus scelerisque tellus sed iaculis. Fusce eleifend, sem id luctus blandit, urna elit fermentum sapien, sit amet auctor mi metus eget nisl. Donec quis eleifend leo. Mauris neque nisl, bibendum a quam nec, dignissim tincidunt justo. Donec eget massa euismod, dignissim augue at, pretium tortor. Nam tempus odio sit amet efficitur aliquam.
+
+</div><div class="pondscroll">
+
+Steel let it be written, coopers tourney dirk, full of terrors wench you know nothing always pays his debts. Seven hells old bear arakh, though all men do despise us honeyed locusts ser slay never resting. Moon and stars rouse me not the wall bastard poison is a woman's weapon night's watch. Lord of light death before disgrace, your grace though all men do despise us gargoyles arbor gold.<p>
+
+Mulled wine lance destrier. Wolf work her will usurper. Royal maester, the seven goblet joust, green dreams suckling pig, spiced wine dirk arbor gold prince. Mare's milk mace our sun shines bright. Moon-flower juice night's watch pride and purpose. Beast we light the way. Never resting. Honeyed locusts, righteous in wrath sister, milk of the poppy, old bear no song so sweet. Let me soar moleskin. Clansmen lance. Nuncle bloody mummers the wall. Arbor gold half-man, slave m'lady, green dreams, ever vigilant, neeps. Suckling pig, spiced wine moon-flower juice, we do not sow, your grace your grace never resting. Smallfolk winter is coming. Old bear. Raiders cold. Full of terrors, bloody mummers, dwarf ice, garron wildling, baseborn. The seven ward, blood slave, your grace, seven hells, gown. The wall night's watch dog.<p>
+
+Suckling pig, as high as honor, no foe may pass, green dreams mulled wine fool cell. A taste of glory mace. Drink, your king commands it princess dragons. Ice trencher spider. Never resting snow dwarf. Gargoyles honeyed locusts mare's milk. None so dutiful your grace. Spiced wine, realm you know nothing, no foe may pass, the seven moon and stars m'lord. Arbor gold. In his cups. No foe may pass moleskin. Ironborn death before disgrace garrison. Arbor gold trueborn, suckling pig, green dreams, mulled wine, bannerman. Work her will moon. The last of the dragons. Beware our sting warg. Ever vigilant. Crows m'lady. Bloody mummers the wall.
+
+    </div></div></div></center>
+    </td>
+    <td>
+      <div class="patientlove"><div class="plimg">
+
+<img src="http://placehold.it/600x350" />
+
+<span></span></div><div class="pltabs">
+ 
+<div class="pltab"><input type="radio" id="pl-1" name="pl-group" checked><label for="pl-1">
+
+i.
+
+</label><div class="patient"><table cellpadding="0" cellspacing="0"><td><p class="pl-ic">
+
+<b>lorem ipsum</b>
+dolor sit amet
+
+<b>lorem ipsum</b>
+dolor sit amet
+
+<b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+
+</p></td><td><p class="pl-ooc">
+
+<b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+  
+  <b>lorem ipsum</b>
+dolor sit amet
+
+</p></td></table></div></div>
+  
+<div class="pltab"><input type="radio" id="pl-2" name="pl-group"><label for="pl-2" style="margin-left: 166px; background: #d9b999;">
+
+ii.
+
+</label><div class="plcontent">
+
+Wildling honeyed locusts arbor gold, full of terrors, let it be written feed it to the goats mare's milk. Squire winter is coming clansmen, fire craven wench moon and stars pride and purpose none so dutiful. Spiced wine treachery poison is a woman's weapon spider spare me your false courtesy night's watch. Maester work her will never resting, he asked too many questions snow drink, your king commands it.<p>
+
+Maidenhead flagon cloak garrison. Rouse me not ever vigilant. Chamber crows, mace death before disgrace, no song so sweet, old bear merchant court the seven. None so wise the wall bloody mummers. Our sun shines bright honeyed locusts cold. Green dreams spearwife seven hells. Your grace. Manhood gargoyles, mare's milk blood tourney, always pays his debts, mulled wine maester bannerman lance joust. Others beast spiced wine. Arbor gold. As high as honor darkness. Night's watch feast, the seven, the wall, ever vigilant, motley. Goblet sorcery, merchant destrier gallant royal, bloody mummers seven hells, murder beast no foe may pass. Suckling pig green dreams. Mare's milk. Never resting. Spiced wine stag, moon-flower juice, sun slave, honeyed locusts, dog. Righteous in wrath, spiced wine, sword warg, the wall, lance. Ours is the fury moon.<p>
+
+Old bear, mulled wine arbor gold, milk of the poppy, sister spare me your false courtesy. Royal green dreams joust squire. A taste of glory beware our sting. M'lord sorcery garrison. Take the black prince. Bastard no foe may pass. The seven bloody mummers warg. Seven hells, steel you know nothing, no foe may pass, stag warrior sellsword greyscale treachery nuncle. Usurper realm. Ever vigilant slave. Crimson winter is coming dwarf. Slay never resting honeyed locusts. Night's watch spider, moon-flower juice, spiced wine, court holdfast, sword. Suckling pig green dreams. Whore mare's milk bloody mummers. Let it be written. Seven hells. Mulled wine. We light the way.
+
+</div></div>
+  
+<div class="pltab"><input type="radio" id="pl-3" name="pl-group"><label for="pl-3" style="margin-left: 332px; background: #d1c699;">
+
+iii.
+
+</label><div class="plcontent">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu volutpat quam. Maecenas vel lobortis urna, ac interdum enim. Nulla non posuere augue, non commodo ligula. Vivamus eu libero ultrices, egestas sem in, posuere orci. Etiam lobortis ultricies erat, at pharetra quam facilisis quis. Sed luctus scelerisque tellus sed iaculis. Fusce eleifend, sem id luctus blandit, urna elit fermentum sapien, sit amet auctor mi metus eget nisl. Donec quis eleifend leo. Mauris neque nisl, bibendum a quam nec, dignissim tincidunt justo. Donec eget massa euismod, dignissim augue at, pretium tortor. Nam tempus odio sit amet efficitur aliquam.
+</div></div>
+
+</div></div></center>
+    </td>
+  </tr>
+  
+  <tr><td>
+    <center><div class="wings"><div class="wingstabs"><div class="wtab"><input type="radio" id="wings-1" name="wingsgroup" checked><label for="wings-1">
+I.
+</label><div class="wcontent"><div class="wcimg">
+
+<img src="http://placehold.it/400x400" />
+
+</div><div class="wcinfo">
+
+<span>lorem</span>
+<span>lorem ipsum</span>
+<span>dolor sit amet</span>
+
+</div><div class="wctext">
+
+Drink, your king commands it, moon and stars, bloody mummers dirk though all men do despise us dungeon baseborn. Suckling pig steel green dreams, take the black none so dutiful craven milk of the poppy others. Full of terrors ward we do not sow always pays his debts dagger the wall sellsword. Poison is a woman's weapon feast, sandsilk night's watch we light the way no song so sweet.<p>
+
+No foe may pass. He asked too many questions. Your grace, the seven never resting, none so fierce royal, dragons dungeon spiced wine ever vigilant. The last of the dragons maester baseborn. Spider arbor gold rouse me not death. Mulled wine arbor gold garron. Fleet garrison. Mare's milk, old bear wench trencher, our sun shines bright, ours is the fury seven hells. Let it be written. Suckling pig. None so wise dragons king. Maester your grace, night's watch, blood motley, never resting, bannerman. Gargoyles flagon, honed and ready cold, as high as honor, ever vigilant always pays his debts. You know nothing baseborn. Honeyed locusts. Moon-flower juice. Lord of light, the seven, green dreams, moon maidenhead, court. Spiced wine sword, craven gown, mare's milk, bloody mummers, brother. Righteous in wrath mace tourney.<p>
+
+Old bear, death gargoyles arbor gold, slay winter is coming, milk of the poppy mulled wine. Let me soar seven hells. Suckling pig never resting take the black. Moon and stars. A taste of glory. Tread lightly here trencher arakh. Murder always pays his debts. Royal half-man, death before disgrace chamber, nightsoil throne moon-flower juice, nuncle spare me your false courtesy. The seven. Work her will. Honeyed locusts pride and purpose. We do not sow neeps. Bannerman the wall, dragons weirwood, ever vigilant, dirk dagger, coin. Honed and ready greyscale. None so dutiful mare's milk. Green dreams death whore. Spiced wine. Seven hells. In his cups chamber.<p>
+
+Royal maester, spiced wine mulled wine, no song so sweet, no foe may pass old bear trueborn. Suckling pig. Rouse me not, spiced wine, the seven, never resting, dragons. Beware our sting. Always pays his debts. Moon-flower juice king night's watch. Ours is the fury. Arbor gold craven. Cell seven hells you know nothing. Neeps we light the way. Maidenhead bloody mummers. Trencher ice your grace prince ever vigilant the wall slay servant old bear. Our sun shines bright manhood. Ward sorcery. Merchant let it be written. Feed it to the goats honeyed locusts.
+
+</div></div></div>
+  
+<div class="wtab"><input type="radio" id="wings-2" name="wingsgroup"><label for="wings-2">
+ii.
+</label><div class="wcontent"><div class="wcimg">
+
+<img src="http://placehold.it/400x400" />
+
+</div><div class="wcinfo">
+
+<span>placehold</span>
+<span>text goes here</span>
+<span>more text</span>
+
+</div><div class="wctext">
+
+tab two
+
+</div></div></div>
+
+<div class="wtab"><input type="radio" id="wings-3" name="wingsgroup"><label for="wings-3">
+iii.
+</label><div class="wcontent"><div class="wcimg">
+
+<img src="http://placehold.it/400x400" />
+
+</div><div class="wcinfo">
+
+<span>dolor</span>
+<span>lorem ipsum</span>
+<span>placehold</span>
+
+</div><div class="wctext">
+
+tab three
+
+</div></div></div>
+
+<div class="wtab"><input type="radio" id="wings-4" name="wingsgroup"><label for="wings-4">
+iv.
+</label><div class="wcontent"><div class="wcimg">
+
+<img src="http://placehold.it/400x400" />
+
+</div><div class="wcinfo">
+
+<span>hello</span>
+<span>text here</span>
+<span>placeholder</span>
+
+</div><div class="wctext">
+
+tab four
+
+</div></div></div>
+
+</div></div></center></td>
+  <td>
+    <div class="everythingburnsmini" style="float: left;"><a href="/index.php?showuser=<!-- |id| -->"><div class="eb-name" style="background-image:url(http://placehold.it/450x50/0d0d0d);">lorem ipsum</div></a><div class="eb-mini"><img src="http://placehold.it/250x400" /><div class="ebm-info"><div class="ebm-quote"><span>“</span>Pride and purpose darkness crimson, rouse me not, no foe may pass honed and ready a taste of glory. Raiders slave moon and stars, seven hells clansmen the wall lord of light royal tread lightly here. Wench mare's milk smallfolk your grace let it be written you know nothing stag arbor gold. He asked too many questions brothel, though all men do despise us maid green dreams feast holdfast.</div><div class="ebm-age"><span>000</span>info</div><div class="ebm-group">lorem ipsum</div><div class="ebm-occupation">lorem ipsum</div><div class="ebm-application">link one</div><div class="ebm-shipper">link two</div><div class="ebm-posts"><span>000</span>info</div><div class="ebm-gif" style="background-image: url(http://placehold.it/190x100/000000);"></div></div></div></div>
+
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'><center><div class="kcmini" style="float: right;"><div class="kcav"><img src="http://placehold.it/250x400/f8f8f8" /></div><div class="kcmain" style="background-image: url(http://placehold.it/200x350);"><div class="kcminner" style="border-color: #659BA0;"><img src="http://placehold.it/100x100" /><div class="hmiquote">hella rad The wall gown ever vigilant, your grace sword, lord of light pride and purpose pavilion ours is the fury. Work her will seven hells, gallant poison is a woman's weapon mare's milk dirk the seven fool. Sorcery though all men do despise us let me soar in his cups arbor gold squire. Night's watch as high as honor, suckling pig green dreams milk of the poppy spiced wine crypt.</div><div class="hminfo" style="border-color: #659BA0;"><span style="border-color: #659BA0;">lorem</span><span style="border-color: #659BA0;">ipsum</span><span style="border-color: #659BA0;">dolor</span><span style="border-color: #659BA0;">sit amet</span><a href="link"><span style="border-color: #659BA0;">lorem</span></a><a href="link"><span style="border-color: #659BA0;">ipsum</span></a></div><div class="hmiooc" style="color: #659BA0;">dolor sit amet</div></div></div><a href="link"><div class="kcname" style="background: #659BA0;">heading</div></a></div></center></td>
+  
+  </tr>
+
+<tr>
+  <td><link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel="stylesheet">
+    <center><div style="width: 500px; background: #eee;" class="flowerhover">
+
+<div class="flowerimage" style="background-image: url(http://37.media.tumblr.com/d32d566b553ee7dc169e946fdbb25680/tumblr_mvg0pqrVBV1qgpyloo1_500.jpg);">
+
+<div class="flowerhov">
+
+<h1>lorem ipsum</h1>
+
+<span>dolor</span><span>sit amet</span><span>text placehold</span><span>lorem ipsum</span><span>dolor sit amet</span><span>lorem ipsum</span>
+
+<h1>dolor sit amet</h1>
+
+</div></div>
+
+<div class="flowertext"><h1>
+
+this is a title
+
+</h1><div class="mainflower">
+
+<b>bold here</b> <i>italic testing</i> No song so sweet darkness, honed and ready, your grace spiced wine none so dutiful milk of the poppy. wildling, honeyed locusts though all men do despise us others righteous in wrath. Suckling pig drink, your king commands it clansmen let it be written night's watch green dreams. Bloody mummers old bear ever vigilant, the seven none so fierce lord of light let me soar.
+</div><div class="flowertag">
+
+<span>info</span>
+<span>text</span>
+<span>placehold</span>
+
+</div></div>
+
+<div class="flowerbottom" style="background-image: url(http://37.media.tumblr.com/d32d566b553ee7dc169e946fdbb25680/tumblr_mvg0pqrVBV1qgpyloo1_500.jpg);"></div>
+
+    </div></center></td>
+  <td><link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <center><div class="highgardxn">
+
+<div class="highbg" style="background-image: url(http://i.imgur.com/3rD7Tdp.png);">
+
+<div class="hightitle">as clever as she is pretty</div>
+
+<div class="hightext">
+
+<b>bold</b> Always pays his debts warrior, righteous in wrath, suckling pig mare's milk old bear death warg seven hells motley. No song so sweet mace, milk of the poppy let it be written lord of light sun. Poison is a woman's weapon our sun shines bright ours is the fury work her will. Dirk night's watch arbor gold smallfolk, honeyed locusts no foe may pass moon-flower juice moon and stars.<p>
+
+Crimson green dreams joust. Drink, your king commands it. Ever vigilant, a taste of glory, as high as honor, tread lightly here spiced wine merchant. Nuncle honed and ready winter is coming. The wall your grace take the black. Others old bear your grace. Squire snow. Night's watch, spider bloody mummers trencher, manhood none so wise, feed it to the goats destrier. Sorcery let me soar. Dragons princess. Arbor gold full of terrors. Mare's milk dungeon, joust dirk, moon-flower juice, never resting, brother. Mulled wine, the seven spiced wine, court none so dutiful, cell suckling pig you know nothing. We do not sow. Manhood neeps. Warrior lance. Death before disgrace, old bear, brothel garron, night's watch, magister. In his cups, your grace, seven hells, honeyed locusts, half-man. No foe may pass slave.<p>
+
+The wall, stag ever vigilant bannerman, always pays his debts, arakh work her will your grace. Whore mulled wine bloody mummers. The seven tread lightly here moon-flower juice. Darkness spiced wine. Fleet rouse me not. Never resting dwarf mare's milk. You know nothing your grace. The wall, always pays his debts, night's watch seven hells, m'lady always pays his debts squire. Green dreams. None so wise. Godswood bloody mummers ever vigilant. The last of the dragons. Trueborn tower court, spider sun, prince maegi, suckling pig, greyscale. Beware our sting servant. Dwarf no song so sweet. Moon-flower juice mulled wine. The seven. Tourney wench. Righteous in wrath dungeon.<p>
+
+Mare's milk, none so dutiful darkness, nightsoil full of terrors, our sun shines bright m'lord squire trueborn. Cold merchant. Honed and ready, your grace, night's watch, tower treachery, pavilion. Whore spider slay. Seven hells blood dungeon. Brothel in his cups nuncle. Spiced wine garron goblet. Never resting stag. Crows let me soar tunic merchant. Milk of the poppy squire. Tread lightly here. Prince old bear full of terrors green dreams fleet you know nothing spider. We light the way throne. Moon-flower juice. Ours is the fury maidenhead. Mace spare me your false courtesy bannerman.
+
+</div></div></div></center>
+  </td></tr>
+<tr><td>
+  <center><div id="deltumblr"><div class="delcred">©</div><div class="desbsemi"></div><div class="desb"><div class="desbicon">
+
+<img src="http://placehold.it/100x100" />
+
+</div><div class="desbdesc">
+
+tumblr description don't make it too long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu volutpat quam. Maecenas vel lobortis urna, ac interdum enim. Nulla non posuere augue, non commodo ligula. Vivamus eu libero ultrices, egestas sem in, posuere orci.
+
+</div><div class="desblink">
+
+
+<a href="#">home</a>
+<a href="/ask">ask</a>
+<a href="#">archive</a>
+<a href="#">dashboard</a>
+<a href="#">link here</a>
+
+</div></div><div class="delposts"><div class="deltpost">
+
+<div class="delt-photo">
+<img src="http://placehold.it/250x250" width="250px" />
+<span>caption goes here</span>
+</div><div class="delt-tags">
+#tags
+</div>
+
+<div class="delt-text">
+<span>text post</span>
+</div><div class="delt-tags">
+#tags here
+</div>
+
+<div class="delt-music">
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_mini.swf" width="250" height="15"><param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_mini.swf" /><param name="bgcolor" value="#8BA6AC" /><param name="FlashVars" value="mp3=http://www.panicstream.com/streams/temp/xmas/chipmonks/16-the_chipmunks_-_deck_the_halls.mp3&amp;buttoncolor=ffffff&amp;slidercolor=ffffff" /></object>
+<span>caption goes here</span>
+</div><div class="delt-tags">
+#music
+</div>
+
+<div class="delt-photo">
+<table cellpadding="0" cellspacing="0"><tr><td><img src="http://placehold.it/120x120" width="120px" /></td><td width="10px"></td><td><img src="http://placehold.it/120x120" width="120px" /></td></tr><tr height="10px"></tr><tr><td><img src="http://placehold.it/120x120" width="120px" /></td><td width="10px"></td><td><img src="http://placehold.it/120x120" width="120px" /></td></tr></table>
+<span>caption goes here</span>
+</div><div class="delt-tags">
+#image #tag
+</div>
+
+<div class="delt-quote">
+<h1>“quote goes here.”</h1>
+<h2>- confucius</h2>
+</div><div class="delt-tags">
+#quote
+</div>
+  <div style="height: 30px;"></div></div></div></div></center></td>
+<td>
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<center><div id="dtapp"><div class="dapptab"><div class="twelve"><input type="radio" id="twelve-1" name="daytwelve" checked><label for="twelve-1"><span class="lnr lnr-pencil"></span></label><div class="dtwelveimg">
+
+<img src="http://placehold.it/300x450"/>
+
+<h1>lorem ipsum dolor</h1>
+
+<p><span>sit amet lorem</span>
+<span>ipsum dolor sit</span>
+<span>amet lorem ipsum</span>
+<span>dolor sit amet</span>
+<span>lorem ipsum</span></p>
+
+</div></div>
+  
+<div class="twelve"><input type="radio" id="twelve-2" name="daytwelve"><label for="twelve-2"><span class="lnr lnr-book"></span></label><div class="tcontain"><div class="twelvecon">
+
+Pie bonbon dragée chupa chups. Cheesecake chocolate marzipan candy canes liquorice jelly-o marzipan donut lollipop. Powder halvah toffee sweet sweet jelly beans biscuit chocolate. Cotton candy icing powder oat cake cake cotton candy lollipop unerdwear.com bonbon. Biscuit tart apple pie. Jelly beans donut unerdwear.com chupa chups. Applicake tart unerdwear.com ice cream cookie biscuit chocolate candy tootsie roll. Muffin jelly sweet roll oat cake jelly powder. Chocolate dragée icing toffee fruitcake liquorice icing cotton candy cake. Sweet roll chocolate brownie jujubes tootsie roll wafer liquorice. Sesame snaps sesame snaps cotton candy tiramisu danish chocolate cake tiramisu caramels. Bear claw jelly-o cake chocolate bar sugar plum chupa chups. Icing cookie applicake oat cake caramels. Fruitcake topping pastry topping.<p>
+
+Gummi bears croissant muffin. Jelly cookie chupa chups. Chocolate cake icing marshmallow cookie jujubes marshmallow icing applicake. Toffee sugar plum oat cake toffee croissant bonbon topping chocolate wafer. Chupa chups sugar plum candy. Marzipan tart brownie oat cake candy canes lollipop bonbon jujubes macaroon. Topping wafer tart. Danish tootsie roll marshmallow chupa chups cookie jelly toffee lemon drops chocolate bar. Biscuit sesame snaps dragée topping marzipan sweet dessert cookie. Unerdwear.com tiramisu gummi bears pie. Topping marzipan halvah pie marshmallow sweet roll lollipop. Bonbon bonbon bonbon gummies candy canes soufflé croissant tootsie roll. Sweet roll oat cake lollipop. Pie liquorice cookie donut.<p>
+
+Applicake pastry gummies unerdwear.com chocolate. Gummi bears chupa chups dragée. Tiramisu dragée chocolate jelly-o chocolate bar jelly beans sugar plum. Tart ice cream marzipan pie muffin. Cupcake sweet dessert marzipan bear claw danish dessert gummies. Cupcake carrot cake chocolate fruitcake dragée jujubes sweet roll donut lemon drops. Toffee tart jelly beans gummi bears sweet roll dessert caramels lollipop cupcake. Tiramisu tart chocolate cake. Lemon drops dragée wafer chocolate cake chocolate bar chocolate cake. Biscuit bonbon sesame snaps. Jelly beans icing toffee lollipop chocolate cake. Marshmallow cookie macaroon biscuit gingerbread jelly powder. Powder marzipan soufflé. Candy canes soufflé topping oat cake cotton candy bear claw.<p>
+
+Cake sesame snaps gummi bears lemon drops apple pie jelly-o jelly-o gingerbread. Apple pie jelly macaroon fruitcake cookie dragée. Tootsie roll lemon drops halvah dessert marzipan powder gummi bears cheesecake toffee. Chocolate cake tootsie roll gingerbread. Chupa chups caramels macaroon. Gummi bears toffee candy. Chocolate bar oat cake chocolate cake wafer. Jelly danish tiramisu sweet icing. Topping tart applicake cotton candy. Carrot cake danish chocolate bar tootsie roll croissant sesame snaps marshmallow sugar plum. Muffin chupa chups gingerbread jelly-o oat cake icing chupa chups chocolate cake pudding. Soufflé unerdwear.com sweet roll sweet roll.<p>
+
+Pudding tiramisu cupcake apple pie. Powder biscuit tootsie roll wafer cake gingerbread candy chupa chups. Tart ice cream dessert fruitcake. Jujubes brownie candy muffin. Sweet roll chocolate cake donut danish pudding. Marshmallow bear claw jujubes chupa chups icing jelly beans cupcake topping topping. Sesame snaps chocolate gummies chocolate bar sugar plum apple pie. Dragée danish candy pastry. Dessert gummies powder chupa chups tootsie roll chocolate macaroon tootsie roll candy. Cupcake biscuit lollipop cheesecake. Brownie dragée soufflé cotton candy liquorice pie. Sweet dragée pie cookie. Gummies chocolate tootsie roll tart cupcake.
+
+</div></div></div>
+  
+<div class="twelve"><input type="radio" id="twelve-3" name="daytwelve"><label for="twelve-3"><span class="lnr lnr-user"></span></label><div class="tcontain"><div class="twelvecontwo">
+
+<img src="http://placehold.it/100x250" />
+
+<h1>lorem</h1>
+<h2>ipsum</h2>
+
+<p>Moon-flower juice, mulled wine realm sellsword, bloody mummers suckling pig, you know nothing cloak dagger mare's milk. Spiced wine. Ever vigilant garrison, your grace, green dreams, spiced wine, cell. None so fierce. Honeyed locusts old bear. Crimson arbor gold bloody mummers. Never resting mare's milk. The seven arakh. Raiders nightsoil suckling pig destrier feast. Spare me your false courtesy. Ever vigilant princess. Mulled wine drink, your king commands it green dreams always pays his debts. Lord of light your grace. The wall. Baseborn coopers honed and ready. None so dutiful spiced wine summerwine merchant.</p>
+
+</div></div></div>
+
+  </div></div></center></td></tr>
+  </table>
+  
+  <div class="aveyhits">avery chan • code portfolio • <script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5586068";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=&e2=&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script> / <script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3317754";
+fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
 </script>
-<center><div id="uxsoc">
-<div class="uxs1">
-
-<div class="nav"><div class="uxsoc-logo"></div>
-
-<div class="uxs1-bar">
-<a href="#uxs2">About Us</a>
-<a href="http://averymbc.github.io/uxsoccommunity">Community</a>
-<a href="#uxs3">Work</a>
-<a href="#uxs4">Contact Us</a>
-  </div></div>
-
-
-<div class="uxs1-intro">
-<h2>OUR NORTH STAR</H2>
-<H1>We make<br>design leaders</h1>
-
-<a href="#"><div class="uxs1-button">START YOUR JOURNEY</div></a>
 </div>
-
-<div class="uxs1-img"></div>
-</div>
-
-<div id="uxs2">
-<div class="uxs2-img1"></div>
-<div class="uxs2-img2"></div>
-
-<p>User Experience Society aims to guide the design<br>
-leaders of tomorrow, creating products and<br>
- services that will make the world a better place</p>
-
-</div>
-
-<div id="uxs3">
-
-<table cellpadding="0" cellspacing="0"><td>
-<div class="uxs3-td td1">
-<div class="uxs3-tdimg"></div>
-
-<h2>community</h2>
-<h1>Geared for Growth</h1>
-
-<p>Engage yourself with the community. Discover what you can do and how you can grow with us.</p>
-
-<a href="#"><div class="uxs3-button">EXPERIENCE THE MAFIA</div></a>
-
-</div></td><td>
-<div class="uxs3-td">
-<div class="uxs3-tdimg"></div>
-
-<h2>consultancy</h2>
-<h1>Crafted for Work</h1>
-
-<p>We help businesses improve their products and services through intentional design, and we never fail to deliver.</p>
-
-<a href="#"><div class="uxs3-button">EXPLORE OUR PROJECTS</div></a>
-
-</div></td></table>
-
-</div>
-<div id="uxs4">
-
-<h2>CONTACT US</H2>
-<H1>We'd love to hear from you.<br>
-  Drop us a line below!</h1>
-
-<input type='text' size='50' name='name' value='Name' onfocus='this.value = "";' />
-  <input type='text' size='50' name='email' value='Email Address' onfocus='this.value = "";' />
-  
-  <textarea name="message" cols="48" rows="10" value="Your Message"></textarea>
-
-<div class="uxs4-button">SEND MESSAGE</div>
-
-</div>
-  
-<div class="uxs5">
-<div class="uxsoc-logo"></div>
-
-<table cellpadding="0" cellspacing="0" class="uxs5-links"><td>
-<b>About Us</b>
-<a href="/">Link</a>
-<a href="/">Link</a>
-<a href="/">Link</a>
-</td><td>
-<b>Community</b>
-<a href="/">Link</a>
-<a href="/">Link</a>
-<a href="/">Link</a>
-</td><td>
-<b>Work</b>
-<a href="/">Link</a>
-<a href="/">Link</a>
-<a href="/">Link</a>
-</td><td>
-<b>Contact</b>
-<a href="/">Link</a>
-<a href="/">Link</a>
-<a href="/">Link</a>
-</td></table>
-
-
-<div class="uxs5-cred">
-Passionately made by User Experience Society<br>
-(Avery Chan - Application for Senior Web Developer)
-</div>
-
-<div class="uxs5-social">
-  <a href="/" class="uxfb" title="UXSoc Facebook"></a>
-  <a href="/" class="uxtwit" title="UXSoc Twitter"></a>
-  <a href="/" class="uxmed" title="UXSoc Medium"></a>
-</div>
-</div>
-  </div></center></body>
+  </div></center>
+</body>
 </html>
